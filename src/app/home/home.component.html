@@ -1,74 +1,13 @@
 
-
-
-<h1>HOME Component</h1>
-
-<button (click)="goTo('second')">SecondApp</button>
-<button (click)="goTo('calculator')">Calculator</button>
-
-<div class="container">
-  <br>
-  <h1>Jolondek Apps</h1>
   
-  <div class="card">
-    <div class="card-header">
-      <b>Calculadora de Notas Equivalentes</b>
-    </div>
-
-    <div class="card-body">
-      <div class="row f-row">
-        <div class="col-md-2">Valor da prova 1:</div>
-        <div class="col-md-2"><input type="number" [(ngModel)]="total_p1" step="0.5" min="0" max="10"></div>
-
-        <div class="col-md-2">Valor da prova 2:</div>
-        <div class="col-md-2"><input type="number" [(ngModel)]="total_p2" step="0.5" min="0" max="10"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-2">Nota da prova 1:</div>
-        <div class="col-md-2"><input type="number" [(ngModel)]="nota_p1" step="0.5" min="0" max="10"></div>
-
-        <div class="col-md-2"><b>Nota da prova 2:</b></div>
-        <div class="col-md-2">
-          <h2><span *ngIf="total_p1 >= 0 && total_p2 >= 0 && nota_p1 >= 0">{{(total_p2 * nota_p1) / total_p1 | number:'1.2-2'}}</span>&nbsp;</h2>
-        </div>
-      </div>
-
-    </div>
+<div class="container-fluid bg-3 text-center">    
+  <div class="btn-group-vertical">
+    <button type="button" class="btn btn-primary" (click)="goTo('calculator/equivalent')">Calculadora Nota de Equivalência</button>
+    <button type="button" class="btn btn-primary" (click)="goTo('calculator/split-question')">Calculadora Dividir Questão</button>
+    <button type="button" class="btn btn-primary">Em construção...</button>
   </div>
-
-  <br>
-  <br>
-
-  <div class="card">
-    <div class="card-header">
-      <b>Calculadora de Valor por Questão</b>
-    </div>
-
-    <div class="card-body">
-      <div class="row" style="margin-bottom: 20px;">
-        <div class="col-md-3">Valor Total da Questão:</div>
-        <div class="col-md-2"><input type="number" [(ngModel)]="total_questao" step="0.1" min="0" max="10"></div>
-
-        <div class="col-md-3">Quantidade de Alternativas:</div>
-        <div class="col-md-2"><input type="number" [(ngModel)]="qtd_alternativas" step="1"></div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-3">Quantidade alternativas certas:</div>
-        <div class="col-md-2"><input type="number" [(ngModel)]="qtd_alternativas_certas" step="1" [max]="qtd_alternativas"></div>
-
-        <div class="col-md-3"><b>Nota da prova 2:</b></div>
-        <div class="col-md-2">
-          <h2><span *ngIf="total_questao >= 0 && qtd_alternativas >= 0 && qtd_alternativas_certas >= 0">
-              {{(total_questao / qtd_alternativas) * qtd_alternativas_certas | number:'1.2-2'}}
-          </span>&nbsp;</h2>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
 </div>
+<br><br>
 
-<button (click)="goTo('second')">SecondApp</button>
+
+

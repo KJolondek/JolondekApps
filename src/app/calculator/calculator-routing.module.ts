@@ -2,16 +2,18 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { CalculatorComponent } from './calculator.component';
+import { CalculatorEquivalentComponent } from './calculator-equivalent.component';
+import { CalculatorSplitQuestionComponent } from './calculator-split-question.component';
 
 const routes: Routes = [
-  {
-      path: '', component: CalculatorComponent,
-  },
+  { path: '', redirectTo: 'equivalent' },
+  { path: 'equivalent', component: CalculatorEquivalentComponent, },
+  { path: 'split-question', component: CalculatorSplitQuestionComponent, },
 ];
 
 const myComponents = [
-  CalculatorComponent
+  CalculatorSplitQuestionComponent,
+  CalculatorEquivalentComponent
 ];
 
 @NgModule({

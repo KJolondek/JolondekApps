@@ -2,10 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
-  templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.scss']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class CalculatorComponent implements OnInit {
+export class HomeComponent implements OnInit {
 
   public total_p1: number;
   public total_p2: number;

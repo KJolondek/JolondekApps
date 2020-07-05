@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
-  templateUrl: './calculator.component.html',
-  styleUrls: ['./calculator.component.scss']
+  templateUrl: './secondApp.component.html',
+  styleUrls: ['./secondApp.component.scss']
 })
-export class CalculatorComponent implements OnInit {
+export class SecondAppComponent implements OnInit {
 
   public total_p1: number;
   public total_p2: number;
@@ -17,17 +17,12 @@ export class CalculatorComponent implements OnInit {
 
   constructor(
     private router: Router,
-    private route: ActivatedRoute
   ) 
   {
 
   }
 
   ngOnInit() {
-  }
-
-  public goTo(url: string){
-    this.router.navigate([url], { relativeTo: this.route });
   }
 
 }

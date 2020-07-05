@@ -4,7 +4,9 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
-  { path: '', loadChildren: './calculator/calculator.module#CalculatorModule' }
+  { path: '', loadChildren: './home/home.module#HomeModule' },
+  { path: 'calculator', loadChildren: './calculator/calculator.module#CalculatorModule' },
+  { path: 'second', loadChildren: './secondApp/secondApp.module#secondAppModule' }
 ];
 
 @NgModule({
